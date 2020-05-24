@@ -1,6 +1,6 @@
 {
-  "name": "csskeyframe-to-aplanimation",
-  "version": "1.0.0",
+  "name": "css-to-apl",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
