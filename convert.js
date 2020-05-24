@@ -268,7 +268,7 @@ let convertToAPL = data => {
                 if(css[i].transform){
                     animateitem.value.push({
                         property: "transform",
-                        from: css[i - 1].transform,
+                        from: css[i - 1].transform || defaultTransform(css[i].transform),
                         to: css[i].transform
                     });
                 }
@@ -285,6 +285,36 @@ let convertToAPL = data => {
         apl.commands[name] = command;
     });
     return Promise.resolve(apl);
+}
+
+let defaultTransform = (val) => {
+    const defaultT = [];
+    for(let i = 0; i < val.length; i++){
+        if(val[i].translateX || val[i].translateY){
+            defaultT.push({
+                translateX: val[i].translateX ? "0" : undefined,
+                translateY: val[i].translateY ? "0" : undefined
+            })
+        }
+        if(val[i].scaleX || val[i].scaleY){
+            defaultT.push({
+                scaleX: val[i].scaleX ? 1 : undefined,
+                scaleY: val[i].scaleY ? 1 : undefined
+            });
+        }
+        if(val[i].rotate){
+            defaultT.push({
+                rotate: val[i].rotate ? 0 : undefined
+            });
+        }
+        if(val[i].skewX || val[i].skewY){
+            defaultT.push({
+                skewX: val[i].skewX ? 0 : undefined,
+                skewY: val[i].skewY ? 0 : undefined
+            });
+        }
+    }
+    return JSON.parse(JSON.stringify(defaultT));
 }
 
 /**
