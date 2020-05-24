@@ -1,0 +1,24 @@
+{
+  "name": "csskeyframe-to-aplanimation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "cd demo && npm run build",
+    "deploy": "gh-pages -d demo/build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css": "2.2.1",
+    "ramda": "0.22.1",
+    "yargs": "^15.3.1"
+  },
+  "bin": {
+    "css-to-apl": "./cli.js"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}

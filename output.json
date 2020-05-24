@@ -1,0 +1,28 @@
+{
+  "type": "APL",
+  "version": "1.1.0",
+  "commands": {
+    "zoomOut": {
+      "parameters": ["duration", "delay"],
+      "commands": [
+        {
+          "type": "AnimateItem",
+          "duration": "${duration * 0.5}",
+          "delay": "${delay || 0}",
+          "value": [
+            {
+              "property": "transform",
+              "to": [{ "scaleX": 0.3, "scaleY": 0.3 }]
+            },
+            { "property": "opacity", "from": "1", "to": "0" }
+          ]
+        },
+        {
+          "type": "AnimateItem",
+          "duration": "${duration * 0.5}",
+          "value": [{ "property": "opacity", "from": "0", "to": "0" }]
+        }
+      ]
+    }
+  }
+}
