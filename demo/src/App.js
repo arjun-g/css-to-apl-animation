@@ -76,7 +76,7 @@ function App() {
     <div className="App">
       <div>
         <h1>CSS to APL</h1>
-        <h2>Convert css keyframes to apl animation</h2>
+        <h2>(Convert css keyframes to apl animation)</h2>
       </div>
       <div className="container">
         <div className="edit">

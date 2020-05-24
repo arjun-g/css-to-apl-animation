@@ -5,7 +5,7 @@ Convert css keyframes to apl animateitem commands
 
 ### Web
 
-Convert directly from browser in - https://arjun-g.github.io/css-to-apl-animation/
+Convert directly from browser in - https://css-to-apl.voicefirst.tools/
 
 ### CLI
 
