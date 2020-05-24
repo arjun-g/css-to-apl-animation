@@ -10,9 +10,9 @@ Convert directly from browser in - https://arjun-g.github.io/css-to-apl-animatio
 ### CLI
 
 ```
-npm install -g css-to-apl
+> npm install -g css-to-apl
 
-css-to-apl ./style.css ./output.json
+> css-to-apl ./style.css ./output.json
 ```
 
 
